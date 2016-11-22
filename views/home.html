@@ -1,0 +1,106 @@
+
+<div class="jumbotron">
+  <img src="img/wood.jpg" class="img-responsive" alt="background" />
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img class="navbar-brand" src="img/kombat.jpg" alt="Mortal Kombat logo">
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a ng-click="gotoElement('portfolio')"><h4>Portfolio</h4></a></li>
+          <li><a ng-click="gotoElement('about')"><h4>About</h4></a></li>
+          <li><a href="#/home/details"><h4>Contact</h4></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+    <div class="container-details">
+  	<a href="#/home/details"></a>
+  	<!-- Nested views will be shown here -->
+  	<ui-view></ui-view>
+    </div>
+  </div>
+
+<div class="portfolio-container">
+  <div id="portfolio"></div><br/>
+<div class="container-fluid bg-3 text-center">
+  <div class="row">
+    <div class="col-sm-3 col-sm-offset-1">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3 col-sm-offset-0">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div>
+<br/>
+
+
+<div class="container-fluid bg-3 text-center">
+  <div class="row">
+    <div class="col-sm-3 col-sm-offset-1">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div>
+</div><br><br>
+
+<div class="about-container">
+<div class="container text-center">
+  <div id="about"><h2>About</h2></div><br/>
+     <div class="row">
+         <div class="col-md-4 col-sm-offset-2">
+            <div class="info">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
+
+            </div>
+          </div>
+       <div class="col-md-4">
+          <div class="info">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+
+<footer class="footer1">
+  <div class="footer">
+       <div class="container">
+           <div class="row">
+             <div class="col-xs-12">
+                   <ul class="social">
+                       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                       <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                       <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                       <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                       <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                   </ul>
+               </div>
+             </div> <!--/.row-->
+      </div> <!--/.container-->
+  </div>
+</footer>
