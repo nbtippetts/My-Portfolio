@@ -9,7 +9,6 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <img class="navbar-brand" src="img/kombat.jpg" alt="Mortal Kombat logo">
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
@@ -22,12 +21,30 @@
   </nav>
 
 
-    <div class="container-details">
+    <div id="container-details">
   	<a href="#/home/details"></a>
   	<!-- Nested views will be shown here -->
   	<ui-view></ui-view>
     </div>
   </div>
+
+
+
+<div class="container">
+  <div class="box rotate">
+    <div class="element"> <img src="img/skate.jpg" alt="skater dude"></div>
+  </div>
+</div>
+<div class="sticky-note-container">
+  <img class="img-responsive" id="img1" src="img/sticky.jpg" alt="sticky note">
+  <img class="img-responsive" id="img1" src="img/stickyhtml.jpg" alt="sticky note">
+  <img class="img-responsive" id="img1" src="img/stickycss.jpg" alt="sticky note">
+  <img class="img-responsive" id="img1" src="img/stickyangular.jpg" alt="sticky note">
+  <img class="img-responsive" id="img1" src="img/stickysql.jpg" alt="sticky note">
+</div>
+
+
+
 
 <div class="portfolio-container">
   <div id="portfolio"></div><br/>
@@ -35,10 +52,10 @@
   <div class="row">
     <div class="col-sm-3 col-sm-offset-1">
       <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <img class="img-responsive" id="img1" style="width:100%" src="img/kombat.jpg" alt="Mortal Kombat logo" alt="Image">
     </div>
     <div class="col-sm-3 col-sm-offset-0">
-      <p>Some text..</p>
+      <p><h2 ui-sref="sonic">SONIC</h2></p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3">

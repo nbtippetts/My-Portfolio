@@ -28,6 +28,11 @@ var app = angular.module('portfolio', ['ngRoute', 'ui.router', 'ngAnimate'])  //
         templateUrl: 'views/details.html'
       })
 
+      .state('sonic', {
+        url: '/sonic',
+        templateUrl: 'views/sonic.html'
+      })
+
 
       $urlRouterProvider
        .otherwise('/home/contact');
