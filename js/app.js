@@ -35,7 +35,7 @@ var app = angular.module('portfolio', ['ngRoute', 'ui.router', 'ngAnimate'])  //
 
 
       $urlRouterProvider
-       .otherwise('/home/contact');
+       .otherwise('/');
 
 });
 
