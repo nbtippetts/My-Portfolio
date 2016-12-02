@@ -1,0 +1,178 @@
+/*ANIMATION*/
+
+
+
+img#img1.img-responsive {
+  margin: 0 auto;
+
+}
+
+
+img#img1.img-responsive:hover {
+  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+@-webkit-keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+.box {
+  margin: 50px auto;
+  margin-top: 15%;
+  width: 20%;
+  height: inherit;
+}
+
+.box:hover {
+  -webkit-transform: rotate(360deg);
+
+}
+
+.rotate {
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.rotate:hover {
+  -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+
+
+  .container1 {
+    display: block;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      /* height: 150px; */
+      margin: 0 auto 20px;
+      box-shadow: 0 0 5px rgb(240,102,0);
+      z-index: 1;
+  }
+
+  .container1 {
+    opacity: 0;
+    animation-name: bounceIn;
+    animation-duration: 450ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+  .container1 {animation-delay: 0.5s;}
+
+  @keyframes bounceIn{
+    0%{
+      opacity: 0;
+      transform: scale(0.3) translate3d(0,0,0);
+    }
+    50%{
+      opacity: 0.9;
+      transform: scale(1.1);
+    }
+    80%{
+      opacity: 1;
+      transform: scale(0.89);
+    }
+    100%{
+      opacity: 1;
+      transform: scale(1) translate3d(0,0,0);
+    }
+  }
+
+  .element {
+    display: flex;
+      justify-content: center;
+      width: 75%;
+  -webkit-animation: nudge 3s linear infinite alternate;
+          animation: nudge 3s linear infinite alternate;
+}
+
+
+@keyframes nudge {
+  0%, 100% {
+   -webkit-transform: translate(0, 0);
+           transform: translate(0, 0);
+ }
+ 50% {
+   -webkit-transform: translate(150px, 0);
+           transform: translate(150px, 0);
+ }
+ 80% {
+   -webkit-transform: translate(-150px, 0);
+           transform: translate(-150px, 0);
+ }
+}
+
+
+
+main.ng-enter {
+       /* transition on enter for .5s */
+       transition: 3s;
+
+       /* start with opacity 0 (invisible) */
+       opacity: 0;
+   }
+
+   /* end 'enter' transition */
+   main.ng-enter.ng-enter-active {
+       /* end with opacity 1 (fade in) */
+       opacity: 1;
+   }
+
+
+   main.ng-leave {
+          /* transition on enter for .5s */
+          transition: 1s;
+
+      }
+
+      /* end 'enter' transition */
+      main.ng-leave.ng-leave-active {
+          /* end with opacity 1 (fade in) */
+          opacity: 0;
+      }

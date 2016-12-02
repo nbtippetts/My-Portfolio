@@ -2,7 +2,6 @@ angular.module('portfolio').controller('loadingCtrl', ['$scope', '$state', '$tim
 
   function($scope, $state, $timeout) {
     $timeout(function() {
-
       $state.go('home.contact');
     }, 7000);
 

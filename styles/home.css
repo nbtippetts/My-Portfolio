@@ -1,11 +1,12 @@
 html,body {
   height: 100%;
   width: 100%;
-  background-image: url('../img/brick.jpg');
+  background-color: #18BC9C;
 }
 
 .jumbotron {
   padding: 0;
+  margin-top: 65px;
 }
 
 
@@ -39,38 +40,53 @@ html,body {
 }
 
 
-.about-container {
-  color: #dddce1;
-  background-image: url('../img/about.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  color: white;
-  padding-top: 10%;
-  height: 700px;
-  margin-top: 40%;
+.sticky-note-container {
+    background-color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    list-style: none;
 }
 
     /* Add a gray background color and some padding to the footer */
 
-.info {
+.about-container {
+  color: white;
+  padding-top: 3%;
+  display: flex;
+}
+
+.text {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-me-container {
+    background-color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+
+.about-container img {
+  border: 3px solid white;
+  border-radius: 200px;
+  margin: 0 auto;
+}
+
+.about-container p {
   font-size: x-large;
+  vertical-align: middle;
 }
 
 .portfolio-container {
-  background-image: url('../img/black.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   color: white;
-  padding-top: 5%;
-  padding-left: 5%;
-  margin-top: 10%;
-  height: 700px;
+  padding-top: 3%;
+  padding-bottom: 3%
 }
 
 #portfolio{
   text-align: center;
-    /* font-size: xx-small; */
-    margin-top: -65px;
     margin-bottom: 100px;
 }
 
@@ -200,185 +216,3 @@ footer {
 		text-align: center;
 	}
 }
-
-
-
-/*ANIMATION*/
-
-
-
-img#img1.img-responsive {
-  margin: 0 auto;
-
-}
-
-
-img#img1.img-responsive:hover {
-  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-          animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
-
-@-webkit-keyframes shake {
-  10%, 90% {
-    -webkit-transform: translate3d(-1px, 0, 0);
-            transform: translate3d(-1px, 0, 0);
-  }
-  20%, 80% {
-    -webkit-transform: translate3d(2px, 0, 0);
-            transform: translate3d(2px, 0, 0);
-  }
-  30%, 50%, 70% {
-    -webkit-transform: translate3d(-4px, 0, 0);
-            transform: translate3d(-4px, 0, 0);
-  }
-  40%, 60% {
-    -webkit-transform: translate3d(4px, 0, 0);
-            transform: translate3d(4px, 0, 0);
-  }
-}
-
-@keyframes shake {
-  10%, 90% {
-    -webkit-transform: translate3d(-1px, 0, 0);
-            transform: translate3d(-1px, 0, 0);
-  }
-  20%, 80% {
-    -webkit-transform: translate3d(2px, 0, 0);
-            transform: translate3d(2px, 0, 0);
-  }
-  30%, 50%, 70% {
-    -webkit-transform: translate3d(-4px, 0, 0);
-            transform: translate3d(-4px, 0, 0);
-  }
-  40%, 60% {
-    -webkit-transform: translate3d(4px, 0, 0);
-            transform: translate3d(4px, 0, 0);
-  }
-}
-
-
-.box {
-  margin: 50px auto;
-  background: inherit;
-  width: 20%;
-  height: inherit;
-}
-
-.box:hover {
-  -webkit-transform: rotate(360deg);
-
-}
-
-.rotate {
-  -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-}
-
-.rotate:hover {
-  -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-  }
-
-
-  .container1 {
-    display: block;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      /* height: 150px; */
-      margin: 0 auto 20px;
-      box-shadow: 0 0 5px rgb(240,102,0);
-      z-index: 1;
-  }
-
-  .container1 {
-    opacity: 0;
-    animation-name: bounceIn;
-    animation-duration: 450ms;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-  }
-  .container1 {animation-delay: 0.5s;}
-
-
-  @keyframes bounceIn{
-    0%{
-      opacity: 0;
-      transform: scale(0.3) translate3d(0,0,0);
-    }
-    50%{
-      opacity: 0.9;
-      transform: scale(1.1);
-    }
-    80%{
-      opacity: 1;
-      transform: scale(0.89);
-    }
-    100%{
-      opacity: 1;
-      transform: scale(1) translate3d(0,0,0);
-    }
-  }
-
-  .element {
-    display: flex;
-      justify-content: center;
-      width: 75%;
-  -webkit-animation: nudge 3s linear infinite alternate;
-          animation: nudge 3s linear infinite alternate;
-}
-
-
-@keyframes nudge {
-  0%, 100% {
-   -webkit-transform: translate(0, 0);
-           transform: translate(0, 0);
- }
- 50% {
-   -webkit-transform: translate(150px, 0);
-           transform: translate(150px, 0);
- }
- 80% {
-   -webkit-transform: translate(-150px, 0);
-           transform: translate(-150px, 0);
- }
-}
-
-
-
-main.ng-enter {
-       /* transition on enter for .5s */
-       transition: 2s;
-
-       /* start with opacity 0 (invisible) */
-       opacity: 0;
-   }
-
-   /* end 'enter' transition */
-   main.ng-enter.ng-enter-active {
-       /* end with opacity 1 (fade in) */
-       opacity: 1;
-   }
-
-
-   main.ng-leave {
-          /* transition on enter for .5s */
-          transition: 1s;
-
-      }
-
-      /* end 'enter' transition */
-      main.ng-leave.ng-leave-active {
-          /* end with opacity 1 (fade in) */
-          opacity: 0;
-      }

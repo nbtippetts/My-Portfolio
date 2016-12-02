@@ -3,7 +3,7 @@ app.service('mainService', function(){
 
     this.scrollTo = function(eID) {
 
-    
+
 
         var startY = currentYPosition();
         var stopY = elmYPosition(eID);
@@ -49,5 +49,4 @@ app.service('mainService', function(){
         }
 
     };
-
 });
