@@ -59,13 +59,10 @@ img#img1.img-responsive:hover {
 
 
 .box {
-  margin: 50px auto;
-  margin-top: 15%;
-  width: 20%;
-  height: inherit;
+  float: right;
 }
 
-.box:hover {
+/*.box:hover {
   -webkit-transform: rotate(360deg);
 
 }
@@ -82,7 +79,7 @@ img#img1.img-responsive:hover {
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
-  }
+  }*/
 
 
   .container1 {
@@ -124,16 +121,8 @@ img#img1.img-responsive:hover {
     }
   }
 
-  .element {
-    display: flex;
-      justify-content: center;
-      width: 75%;
-  -webkit-animation: nudge 3s linear infinite alternate;
-          animation: nudge 3s linear infinite alternate;
-}
-
-
-@keyframes nudge {
+  
+/*@keyframes nudge {
   0%, 100% {
    -webkit-transform: translate(0, 0);
            transform: translate(0, 0);
@@ -146,7 +135,7 @@ img#img1.img-responsive:hover {
    -webkit-transform: translate(-150px, 0);
            transform: translate(-150px, 0);
  }
-}
+}*/
 
 
 

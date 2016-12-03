@@ -20,15 +20,67 @@
     </div>
   </nav>
 
-
     <div id="container-details">
   	<a href="#/home/details"></a>
+    <a href="#/home/social"></a>
   	<!-- Nested views will be shown here -->
   	<ui-view></ui-view>
     </div>
   </div>
 
-  <div class="about-container">
+
+  <div class="container">
+  	  <div class="row mobile-social-share">
+          <div id="socialHolder" class="col-md-3">
+          		<div id="socialShare" class="btn-group share-group">
+
+                 <a data-toggle="dropdown" class="btn btn-info">
+                    <i class="fa fa-share-alt fa-inverse"></i>
+                 </a>
+
+          			 <button href="#" data-toggle="dropdown" class="btn btn-info dropdown-toggle share">
+          					<span class="caret"></span>
+          			 </button>
+
+      			     <ul class="dropdown-menu">
+      					   <li>
+        						 <a data-original-title="Facebook" rel="tooltip"  href="https://www.facebook.com/noah.tippetts.3" class="btn btn-facebook" data-placement="left">
+    								   <i class="fa fa-facebook"></i>
+    							   </a>
+      					   </li>
+
+                   <li>
+      						   <a data-original-title="Instagram" rel="tooltip"  href="https://www.instagram.com/noha_trippetts/" class="btn btn-instagram" data-placement="left">
+  								     <i class="fa fa-instagram"></i>
+  							     </a>
+      					  </li>
+
+                  <li>
+                    <a data-original-title="Github" rel="tooltip"  href="https://github.com/nbtippetts" class="btn btn-github" data-placement="left">
+                      <i class="fa fa-github"></i>
+                    </a>
+                 </li>
+
+      				     <li>
+      						   <a data-original-title="LinkedIn" rel="tooltip"  href="https://www.linkedin.com/in/noah-tippetts-614418130" class="btn btn-linkedin" data-placement="left">
+  								     <i class="fa fa-linkedin"></i>
+  							     </a>
+      					  </li>
+
+                  <li>
+      						  <a  data-original-title="Email" rel="tooltip" href="mailto:nbtippetts@gmail.com" class="btn btn-mail" data-placement="left">
+  								    <i class="fa fa-envelope"></i>
+  							    </a>
+      					  </li>
+                </ul>
+      			 </div>
+          </div>
+      </div>
+  </div>
+
+
+
+  <div class="profile-container">
     <div class="container text-center">
         <img class="img-responsive" src="img/profile.jpg" alt="profile"/>
         <div><h1>Noah Tippetts</h1></div>
@@ -38,14 +90,10 @@
   </div>
 
 
-
-
-<div class="container">
-  <div class="box rotate">
-    <div class="element"> <img src="img/skate.jpg" alt="skater dude"></div>
-  </div>
-</div>
 <div class="sticky-note-container">
+  <div class="element"><img class="img-responsive" src="img/skate.jpg" alt="skater dude"/>
+     <div class="element"><img class="img-responsive" src="img/skate.gif" alt="skater dude"></div>
+  </div>
   <p><h1 style="text-align: center; color: #2C3E50;">SKILLS</h1></p>
   <hr/>
   <div class="container-fluid bg-3 text-center">
@@ -130,14 +178,17 @@
     </div>
 </div>
 
+
 <div class="about-me-container">
   <div id="about"><h1>ABOUT ME</h1></div><br/>
   <div class="text">
-    hkljhalskjhfdlakjhflkasjhdfa
+    I am 20 years old and down for anything that will give me a rush.
   </div>
+  <br/>
+  <br/>
 
   <div class="text">
-aksdhf;aksjhfdklajshdflkjahsdf
+    My DAD is my hero. Always send it for the boyz... For Frodo.
   </div>
 </div>
 

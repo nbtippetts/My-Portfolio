@@ -1,0 +1,11 @@
+.sticky-note-container {
+    background-color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    list-style: none;
+}
+
+.element {
+  display: flex;
+  justify-content: space-around;
+}

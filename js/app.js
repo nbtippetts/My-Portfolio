@@ -28,6 +28,11 @@ var app = angular.module('portfolio', ['ngRoute', 'ui.router', 'ngAnimate'])  //
         templateUrl: 'views/details.html'
       })
 
+      .state('home.social', {
+        url: '/social',
+        templateUrl: 'views/social.html'
+      })
+
 
       $urlRouterProvider
        .otherwise('/');
