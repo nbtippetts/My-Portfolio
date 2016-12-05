@@ -1,12 +1,8 @@
 /*ANIMATION*/
-
-
-
 img#img1.img-responsive {
   margin: 0 auto;
-
+  height: 400px;
 }
-
 
 img#img1.img-responsive:hover {
   -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
@@ -57,31 +53,6 @@ img#img1.img-responsive:hover {
   }
 }
 
-
-.box {
-  float: right;
-}
-
-/*.box:hover {
-  -webkit-transform: rotate(360deg);
-
-}
-
-.rotate {
-  -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-}
-
-.rotate:hover {
-  -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-  }*/
-
-
   .container1 {
     display: block;
       position: fixed;
@@ -121,28 +92,9 @@ img#img1.img-responsive:hover {
     }
   }
 
-  
-/*@keyframes nudge {
-  0%, 100% {
-   -webkit-transform: translate(0, 0);
-           transform: translate(0, 0);
- }
- 50% {
-   -webkit-transform: translate(150px, 0);
-           transform: translate(150px, 0);
- }
- 80% {
-   -webkit-transform: translate(-150px, 0);
-           transform: translate(-150px, 0);
- }
-}*/
-
-
-
 main.ng-enter {
        /* transition on enter for .5s */
-       transition: 3s;
-
+       transition:2s all ease; -moz-transition:2s all ease; -webkit-transition:2s all ease;
        /* start with opacity 0 (invisible) */
        opacity: 0;
    }
@@ -150,18 +102,19 @@ main.ng-enter {
    /* end 'enter' transition */
    main.ng-enter.ng-enter-active {
        /* end with opacity 1 (fade in) */
+      transition:2s all ease; -moz-transition:2s all ease; -webkit-transition:2s all ease;
        opacity: 1;
    }
 
 
    main.ng-leave {
           /* transition on enter for .5s */
-          transition: 1s;
-
+          transition:2s all ease; -moz-transition:2s all ease; -webkit-transition:2s all ease;
       }
 
       /* end 'enter' transition */
       main.ng-leave.ng-leave-active {
           /* end with opacity 1 (fade in) */
+        transition:2s all ease; -moz-transition:2s all ease; -webkit-transition:2s all ease;
           opacity: 0;
       }

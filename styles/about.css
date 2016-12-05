@@ -1,7 +1,7 @@
 .profile-container {
   color: white;
   padding-top: 3%;
-  display: flex;
+  height: 650px;
 }
 
 .text {
@@ -23,9 +23,4 @@
   border-radius: 200px;
   margin: 0 auto;
   height: 400px;
-}
-
-.profile-container p {
-  font-size: x-large;
-  vertical-align: middle;
 }
