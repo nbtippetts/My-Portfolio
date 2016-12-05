@@ -11,4 +11,5 @@ app.controller('homeCtrl', function($scope, $location, mainService) {
       mainService.scrollTo(eID);
 
     };
-  });
+
+});
