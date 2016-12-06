@@ -12,12 +12,21 @@
   padding-bottom: 5%;
 }
 
+.text-over {
+  position: relative;
+}
+
 #element {
   height: 200px;
+  position: relative;
 }
 
 
-#element button {
+#element p {
+  position: absolute;
+  bottom: -9px;
+    height: 30px;
+    width: 198px;
   height: 30px;
   width: 150px;
   padding-top: 4px;
@@ -29,7 +38,7 @@
   transition-duration: 1s;
 }
 
-#element button:hover {
+#element p:hover {
   height: 28px;
   width: 148px;
   background-color: #010c2d;
