@@ -1,8 +1,8 @@
 .portfolio-container {
-  background-color: white;
   padding-top: 3%;
   padding-bottom: 3%;
   height: 650px;
+  border-bottom: 40px solid white;
 }
 
 .portfolio-container .row {
@@ -11,6 +11,18 @@
 }
 
 #portfolio{
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 35px;
+  color: white;
+  border-bottom: 3px solid white;
+}
+
+.games {
+  font-size: xx-large;
+  margin: 0 auto;
+  margin-bottom: -50px;
   text-align: center;
   color: #010c2d;
 }
