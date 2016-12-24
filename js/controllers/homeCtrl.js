@@ -6,6 +6,7 @@ app.controller('homeCtrl', function($scope, $location, mainService) {
       $location.hash('portfolio');
       $location.hash('about');
       $location.hash('contact');
+      $location.hash('Knowledge');
 
       // call $anchorScroll()
       mainService.scrollTo(eID);

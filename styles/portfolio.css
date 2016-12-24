@@ -14,15 +14,11 @@
   text-align: center;
   width: 50%;
   margin: 0 auto;
-  padding-bottom: 35px;
+  padding-bottom: 2%;
   color: white;
   border-bottom: 3px solid white;
 }
 
 .games {
-  font-size: xx-large;
-  margin: 0 auto;
-  margin-bottom: -50px;
-  text-align: center;
-  color: #010c2d;
+  background-color: white;
 }
