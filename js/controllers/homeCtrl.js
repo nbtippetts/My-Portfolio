@@ -1,5 +1,9 @@
 app.controller('homeCtrl', function($scope, $location, mainService) {
 
+    $scope.box1 = $scope.box2 = true;
+
+
+
     $scope.gotoElement = function (eID){
       // set the location.hash to the id of
       // the element you wish to scroll to.

@@ -1,0 +1,23 @@
+{
+  "name": "My-Portfolio",
+  "homepage": "https://github.com/nbtippetts/My-Portfolio",
+  "authors": [
+    "Noah Tippetts <nbtippetts@gmail.com>"
+  ],
+  "description": "Noah Tippetts Portfolio",
+  "main": "index.html",
+  "keywords": [
+    "Portfolio"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
+}

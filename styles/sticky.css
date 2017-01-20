@@ -8,7 +8,6 @@
 .element {
   display: flex;
   justify-content: space-around;
-  background-color: white;
   padding-top: 9%;
   padding-bottom: 5%;
 }
@@ -19,29 +18,56 @@
 
 #element {
   height: 200px;
+  width: 200px;
   position: relative;
 }
 
-
-#element p {
+.text-over p {
   position: absolute;
   font-size: initial;
-  bottom: -9px;
+  bottom: -7px;
+  left: 4px;
   height: 30px;
   width: 150px;
   padding-top: 4px;
   text-align: center;
-  background-color: #18BC9C;
+  background-color: black;
   color: white;
-  border: 1px solid white;
+  border: 1px solid black;
+  outline-style: double;
+  outline-color: white;
   transition: 1s;
   transition-duration: 1s;
 }
 
-#element p:hover {
+.text-over p:hover {
   height: 28px;
   width: 148px;
-  background-color: #010c2d;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  outline-style: double;
+  outline-color: black;
   transition: 1s;
   transition-duration: 1s;
+  -webkit-animation: tada 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: tada 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+@media only screen and (max-width: 600px) {
+    .profile-container {
+       padding-top: 19%;
+    }
+}
+
+@media only screen and (min-width: 724px) {
+    .profile-container {
+       padding-top: 10%;
+    }
 }
