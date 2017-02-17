@@ -7,9 +7,49 @@ app.directive('slideDir', function() {
     },
     link: function(scope, elem, attrs) {
 
-      $(function fixHead() {
+      $(function leftNav() {
+
+        var navOpen = $('#btn-nav-open').show();
+        var navClose = $('#btn-nav-close').hide();
+
+        $('.navbar-nav [data-toggle="tooltip"]').tooltip();
+        $('#btn-nav-open').on('click', function(event) {
+           //console.log($('#btn-nav-open'));
+            event.preventDefault();
+            $('.navbar-twitch').toggleClass('open');
+
+            if (navOpen !== navClose) {
+              navOpen.hide();
+              navClose.show();
+            }
+        });
+
+        $('#btn-nav-close').on('click', function(event) {
+          console.log($('#btn-nav-close'));
+            event.preventDefault();
+            $('.navbar-twitch').toggleClass('open');
+
+            if (navClose !== navOpen) {
+              navClose.hide();
+              navOpen.show();
+            }
+        });
+
+        $('.nav-style-toggle').on('click', function(event) {
+            event.preventDefault();
+            var $current = $('.nav-style-toggle.disabled');
+            $(this).addClass('disabled');
+            $current.removeClass('disabled');
+            $('.navbar-twitch').removeClass('navbar-'+$current.data('type'));
+            $('.navbar-twitch').addClass('navbar-'+$(this).data('type'));
+        });
+      })
+
+      $(function animateElems() {
           var game = $('#games-btn').hide();
           var web = $('#web-btn').hide();
+          var $top_nav = $('#top-nav');
+          var $side_nav = $('#side-nav').hide();
           var $animation_elements = $('.animation-element');
           var $window = $(window);
 
@@ -31,6 +71,16 @@ app.directive('slideDir', function() {
              } else {
                $element.removeClass('in-view');
              }
+
+             if (window_top_position > 60){
+               //console.log($side_nav, $top_nav);
+               $side_nav.fadeIn(1000);
+               $top_nav.fadeOut(500);
+             } else {
+               $side_nav.fadeOut(500);
+               $top_nav.fadeIn(1000);
+             }
+
              if (window_top_position > 1200){
                game.show();
                web.show();
@@ -40,6 +90,14 @@ app.directive('slideDir', function() {
              }
           });
         }
+        //   function compare(a,b) {
+//   if (a.name < b.name)
+//     return -1;
+//   if (a.name > b.name)
+//     return 1;
+//   return 0;
+//   }
+// collection.sort(compare);
 
         $window.on('scroll resize', check_if_in_view);
         $window.trigger('scroll');

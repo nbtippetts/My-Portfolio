@@ -1,6 +1,7 @@
 .sticky-note-container {
   background-color: white;
     padding-top: 3%;
+    padding-left: 55px;
     padding-bottom: 5%;
     list-style: none;
 }
@@ -8,8 +9,7 @@
 .element {
   display: flex;
   justify-content: space-around;
-  padding-top: 9%;
-  padding-bottom: 5%;
+  padding-top: 6%;
 }
 
 .text-over {
