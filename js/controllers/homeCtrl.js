@@ -1,6 +1,6 @@
 app.controller('homeCtrl', function($scope, $location, mainService) {
 
-    $scope.box1 = $scope.box2 = true;
+    $scope.box1 = $scope.box2 = $scope.box3 = true;
 
 
 

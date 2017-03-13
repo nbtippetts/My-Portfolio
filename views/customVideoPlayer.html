@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Video Player</title>
+  <link rel="stylesheet" href="./styles/customVideoPlayer.css">
+</head>
+<body>
+
+  <div ng-controller="customVideoPlayerCtrl">
+   <div class="player" id="player">
+     <video class="player__video viewer" src="https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164"></video>
+
+     <div class="player__controls">
+       <div class="progress">
+        <div class="progress__filled"></div>
+       </div>
+       <button class="player__button toggle" title="Toggle Play">►</button>
+       <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+       <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
+       <button data-skip="-10" class="player__button">« 10s</button>
+       <button data-skip="25" class="player__button">25s »</button>
+       <button id="fullscreenbtn">[ ]</button>
+     </div>
+   </div>
+ </div>
+
+ <script>
+
+     var player = document.querySelector('#player');
+     var video = player.querySelector('.viewer');
+     var progress = player.querySelector('.progress');
+     var progressBar = player.querySelector('.progress__filled');
+     var toggle = player.querySelector('.toggle');
+     var skipButtons = player.querySelectorAll('[data-skip]');
+     var ranges = player.querySelectorAll('.player__slider');
+     //var fullscreen = player.querySelector('.fullscreen');
+
+     function playVideo(e) {
+       var method = video.paused ? 'play' : 'pause';
+       video[method]();
+       console.log(video);
+     }
+
+     function updateButton(e) {
+       var icon = this.paused ? '►' : '| |';
+       console.log(icon);
+       toggle.textContent = icon;
+     }
+
+     function skip(e) {
+       video.currentTime += parseFloat(this.dataset.skip);
+       console.log(this.dataset.skip)
+     }
+
+     function handleRangeUpdate(e) {
+        video[this.name] = this.value
+     }
+
+     function handleProgress(e) {
+       var percent = (video.currentTime / video.duration) * 100;
+       progressBar.style.flexBasis = `${percent}%`;
+     }
+
+     function scrub(e) {
+       var scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+       video.currentTime = scrubTime;
+     }
+
+     // function fullscreen(e) {
+     //   var fullHeight = (window.innerHeight && window.innerWidth);
+     //   player.style.toggle(`fullscreen-active`)
+     //   console.log(fullHeight);
+     // }
+     var fullscreenbtn;
+     fullscreenbtn = document.getElementById("fullscreenbtn");
+
+     function toggleFullScreen(){
+       if(player.requestFullScreen){
+         player.requestFullScreen();
+       } else if(player.webkitRequestFullScreen){
+         player.webkitRequestFullScreen();
+       } else if(player.mozRequestFullScreen){
+         player.mozRequestFullScreen();
+       }
+
+       if (player.exitFullscreen) {
+         player.exitFullscreen();
+       }
+     }
+
+     fullscreenbtn.addEventListener("click", toggleFullScreen, false);
+
+     video.addEventListener('click', playVideo);
+     video.addEventListener('play', updateButton);
+     video.addEventListener('pause', updateButton);
+     video.addEventListener('timeupdate', handleProgress);
+
+     toggle.addEventListener('click', playVideo);
+
+     skipButtons.forEach(button => button.addEventListener('click', skip));
+     ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
+     ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate));
+
+     var downs = false;
+     progress.addEventListener('click', scrub);
+     progress.addEventListener('mousemove', (e) => downs && scrub(e));
+     progress.addEventListener('downs', () => downs = true);
+     progress.addEventListener('mouseup', () => downs = false);
+
+     //let click = true;
+     //player.addEventListener('click', fullscreen);
+     //player.addEventListener('transitionend', fullscreen);
+
+  </script>
+ </body>
+</html>

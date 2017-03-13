@@ -233,6 +233,7 @@
   <div id="portfolio"><h1>Portfolio</h1></div><br/>
   <slide-Dir games="games" style="display: flex; justify-content: space-around; width: 50%; margin: 0 auto">
     <button class="slide-in-btn animated rubberBand" id="games-btn" type="button" value="Toggle First = {{box1}}" ng-click="box1=!box1" style="border: 1px solid black; outline-style: double; outline-color: white">Games</button>
+    <button class="slide-in-btn animated rubberBand" id="jsProjects-btn" type="button" value="Toggle third = {{box3}}" ng-click="box3=!box3" style="border: 1px solid black; outline-style: double; outline-color: white">JS Projects</button>
     <button class="slide-in-btn animated rubberBand" id="web-btn" type="button" value="Toggle Second = {{box2}}" ng-click="box2=!box2" style="border: 1px solid black; outline-style: double; outline-color: white">Web</button>
   </slide-Dir>
         <div id="div1" data-show-Projects-Dir="box1" data-show-Projects-Dir-duration="100" >
@@ -261,8 +262,65 @@
            </div>
         </div>
       </div>
+      <div id="div3" data-show-Projects-Dir="box3" data-show-Projects-Dir-duration="100" >
+        <div class="container-fluid text-center">
+          <div class="element">
+            <!-- <li><a ui-sref="drumkit"><h4>drumkit</h4></a></li>
+            <li><a ui-sref="clock"><h4>clock</h4></a></li>
+            <li><a ui-sref="cssvars"><h4>cssvars</h4></a></li>
+            <li><a ui-sref="photogallery"><h4>photogallery</h4></a></li>
+            <li><a ui-sref="typeAhead"><h4>typeAhead</h4></a></li>
+            <li><a ui-sref="htmlCanvas"><h4>htmlCanvas</h4></a></li>
+            <li><a ui-sref="checkbox"><h4>checkbox</h4></a></li>
+            <li><a ui-sref="customVideoPlayer"><h4>customVideoPlayer</h4></a></li>
+            <li><a ui-sref="mouseShadow"><h4>mouseShadow</h4></a></li> -->
+          <div class="row animated slideInRight">
+              <img ui-sref="checkbox" class="img-responsive" id="img3" src="./img/checkbox.png" alt="Mortal Kombat logo">
+              <span class="jsDescription">CheckBox</span>
+          </div>
+          <div class="row animated slideInLeft">
+            <img ui-sref="clock" class="img-responsive" id="img3" src="./img/clock.gif" alt="Mortal Kombat logo">
+            <span class="jsDescription">Clock</span>
+          </div>
+          <div class="row animated slideInRight">
+              <img ui-sref="drumkit" class="img-responsive" id="img3" src="./img/concert.jpg" alt="Mortal Kombat logo">
+              <span class="jsDescription">DrumKit</span>
+          </div>
+          <div class="row animated slideInLeft">
+              <img ui-sref="htmlCanvas" class="img-responsive" id="img3" src="./img/drawing.gif" alt="Mortal Kombat logo">
+              <span class="jsDescription">Drawing</span>
+          </div>
+          </div>
+          <div class="element">
+          <div class="row animated slideInRight">
+              <img ui-sref="photogallery" class="img-responsive" id="img3" src="./img/PhotoGallery.gif" alt="Mortal Kombat logo">
+              <span class="jsDescription">PhotoGallery</span>
+          </div>
+          <div class="row animated slideInLeft">
+              <img ui-sref="typeAhead" class="img-responsive" id="img3" src="./img/searchlist.png" alt="Mortal Kombat logo">
+              <span class="jsDescription">searchlist</span>
+          </div>
+          <div class="row animated slideInRight">
+              <img ui-sref="customVideoPlayer" class="img-responsive" id="img3" src="./img/Video-Player.png" alt="Mortal Kombat logo">
+              <span class="jsDescription">Video Player</span>
+          </div>
+          <div class="row animated slideInLeft">
+              <img ui-sref="cssvars" class="img-responsive" id="img3" src="./img/webdevelopment.png" alt="Mortal Kombat logo">
+              <span class="jsDescription">Edit Picture</span>
+          </div>
+          <div class="row animated slideInLeft">
+              <img ui-sref="mouseShadow" class="img-responsive" id="img3" src="./img/shadow.gif" alt="Mortal Kombat logo">
+              <span class="jsDescription">Fun Animation</span>
+          </div>
+          <div class="row animated slideInLeft">
+              <img ui-sref="webCam" class="img-responsive" id="img3" src="./img/webcam.png" alt="Mortal Kombat logo">
+              <span class="jsDescription">Web Cam</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 
 
 <div class="about-me-container">

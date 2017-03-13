@@ -1,8 +1,12 @@
 angular.module('portfolio').controller('loadingCtrl', ['$scope', '$state', '$timeout',
 
   function($scope, $state, $timeout) {
-    $timeout(function() {
+    var bye = $timeout(function() {
       $state.go('home.contact');
-    }, 7000);
+    }, 0);
 
-    }])
+    $scope.$on('$destroy', function() {
+      $timeout.cancel(bye);
+    })
+
+}])

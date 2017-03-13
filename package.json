@@ -1,0 +1,22 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Noah Tippetts personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbtippetts/My-Portfolio.git"
+  },
+  "author": "Noah Tippetts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nbtippetts/My-Portfolio/issues"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.5"
+  },
+  "homepage": "https://github.com/nbtippetts/My-Portfolio#readme"
+}

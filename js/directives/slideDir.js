@@ -48,6 +48,7 @@ app.directive('slideDir', function() {
       $(function animateElems() {
           var game = $('#games-btn').hide();
           var web = $('#web-btn').hide();
+          var jsProjects = $('#jsProjects-btn').hide();
           var $top_nav = $('#top-nav');
           var $side_nav = $('#side-nav').hide();
           var $animation_elements = $('.animation-element');
@@ -84,9 +85,11 @@ app.directive('slideDir', function() {
              if (window_top_position > 1200){
                game.show();
                web.show();
+               jsProjects.show();
              } else {
                game.hide();
                web.hide();
+               jsProjects.hide();
              }
           });
         }

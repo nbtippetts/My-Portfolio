@@ -33,6 +33,57 @@ var app = angular.module('portfolio', ['ngRoute', 'ui.router', 'ngAnimate'])  //
         templateUrl: 'views/social.html'
       })
 
+      .state('drumkit', {
+        url: '/drumkit',
+        templateUrl: 'views/drumkit.html'
+      })
+
+      .state('clock', {
+        url: '/clock',
+        templateUrl: 'views/clock.html'
+      })
+
+      .state('cssvars', {
+        url: '/cssvars',
+        templateUrl: 'views/cssvars.html'
+      })
+
+      .state('photogallery', {
+        url: '/photogallery',
+        templateUrl: 'views/photogallery.html'
+      })
+
+      .state('typeAhead', {
+        url: '/typeAhead',
+        templateUrl: 'views/typeAhead.html'
+      })
+
+      .state('htmlCanvas', {
+        url: '/htmlCanvas',
+        templateUrl: 'views/htmlCanvas.html'
+      })
+
+      .state('checkbox', {
+        url: '/checkbox',
+        templateUrl: 'views/checkbox.html'
+      })
+
+      .state('customVideoPlayer', {
+        url: '/customVideoPlayer',
+        templateUrl: 'views/customVideoPlayer.html'
+      })
+
+      .state('mouseShadow', {
+        url: '/mouseShadow',
+        templateUrl: 'views/mouseShadow.html'
+      })
+
+      .state('webCam', {
+        url: '/webCam',
+        templateUrl: 'views/webCam.html',
+        controller: 'webCamCtrl'
+      })
+
 
       $urlRouterProvider
        .otherwise('/');

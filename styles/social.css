@@ -1,4 +1,4 @@
-canvas {
+/*canvas#c {
   display: block;
   position: absolute;
   border: 2px solid black;
@@ -8,7 +8,7 @@ canvas {
   bottom: 0;
   right: 0;
   left: 0;
-}
+}*/
 
 @keyframes bounceIn {
   from, 20%, 40%, 60%, 80%, to {

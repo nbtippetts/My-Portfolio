@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get User Media Code Along!</title>
+  <!-- <link rel="stylesheet" href="./styles/webCam.css"> -->
+</head>
+<body>
+  <style>
+
+.photobooth {
+  background:white;
+  max-width:150rem;
+  margin: 2rem auto;
+  border-radius:2px;
+}
+
+.photobooth button {
+  position: absolute;
+  left: 15px;
+}
+
+/*clearfix*/
+.photobooth:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.photo {
+  width:70%;
+  margin-left: 15px;
+}
+
+.player {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  width: 200px;
+}
+
+/*
+  Strip!
+*/
+
+.strip {
+  padding:2rem;
+}
+.strip img {
+  width:100px;
+  overflow-x: scroll;
+  padding:0.8rem 0.8rem 2.5rem 0.8rem;
+  box-shadow:0 0 3px rgba(0,0,0,0.2);
+  background:white;
+}
+
+.strip a:nth-child(5n+1) img { transform: rotate(10deg); }
+.strip a:nth-child(5n+2) img { transform: rotate(-2deg); }
+.strip a:nth-child(5n+3) img { transform: rotate(8deg); }
+.strip a:nth-child(5n+4) img { transform: rotate(-11deg); }
+.strip a:nth-child(5n+5) img { transform: rotate(12deg); }
+  </style>
+
+  <div class="photobooth">
+    <div class="controls">
+      <!-- <div class="rgb">
+        <label for="rmin">Red Min:</label>
+        <input type="range" min=0 max=255 name="rmin">
+        <label for="rmax">Red Max:</label>
+        <input type="range" min=0 max=255 name="rmax">
+
+        <br>
+
+        <label for="gmin">Green Min:</label>
+        <input type="range" min=0 max=255 name="gmin">
+        <label for="gmax">Green Max:</label>
+        <input type="range" min=0 max=255 name="gmax">
+
+        <br>
+
+        <label for="bmin">Blue Min:</label>
+        <input type="range" min=0 max=255 name="bmin">
+        <label for="bmax">Blue Max:</label>
+        <input type="range" min=0 max=255 name="bmax">
+      </div> -->
+      <br>
+      <button onClick="takePhoto()">Take Photo</button>
+    </div>
+
+    <canvas class="photo"></canvas>
+    <video class="player"></video>
+    <div class="strip"></div>
+  </div>
+
+  <audio class="snap" src="http://wesbos.com/demos/photobooth/snap.mp3" hidden></audio>
+
+  <script>
+      var video = document.querySelector('.player');
+      var canvas = document.querySelector('.photo');
+      var ctx = canvas.getContext('2d');
+      var strip = document.querySelector('.strip');
+      var snap = document.querySelector('.snap');
+
+
+        function webCams() {
+          navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+            .then(localMediaStream => {
+              console.log(localMediaStream);
+              video.src = window.URL.createObjectURL(localMediaStream)
+              video.play();
+            })
+            .catch(err => {
+              console.error('OH NOO', err);
+            })
+        }
+
+        function paintToCanavas() {
+          console.log(canvas);
+          var width = video.videoWidth;
+          var height = video.videoHeight;
+          canvas.width = width;
+          canvas.height = height;
+
+          return setInterval(() => {
+            ctx.drawImage(video, 0, 0, width, height);
+            let pixels = ctx.getImageData(0, 0, width, height);
+            //pixels = rgbSplit(pixels);
+            ctx.putImageData(pixels, 0, 0);
+          }, 16);
+        }
+
+        function takePhoto() {
+          snap.currentTime = 0;
+          snap.play();
+
+          var data = canvas.toDataURL('image/jpeg');
+          var link = document.createElement('a');
+          link.href = data;
+          link.setAttribute('download', 'handsome');
+          link.innerHTML = `<img src="${data}" alt="Handsome Man" />`;
+          strip.insertBefore(link, strip.firsChild);
+          console.log(strip)
+        }
+
+        webCams();
+
+        video.addEventListener('canplay', paintToCanavas);
+
+  </script>
+</body>
+</html>

@@ -12,18 +12,27 @@ app.directive('showProjectsDir', function() {
         $(function show() {
           var showWeb = $('#div1').hide();
           var showGame = $('#div2').hide();
+          var showJsProjects = $('#div3').hide();
 
           $('#web-btn').on('click', function() {
             showWeb.show()
             showGame.hide();
+            showJsProjects.hide()
           });
 
           $('#games-btn').on('click', function() {
             showWeb.hide()
             showGame.show()
+            showJsProjects.hide()
           });
+
+          $('#jsProjects-btn').on('click', function() {
+            showWeb.hide()
+            showGame.hide()
+            showJsProjects.show()
         });
       });
-    }
-  };
+    })
+  }
+}
 })
