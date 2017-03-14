@@ -1,13 +1,13 @@
 .portfolio-container {
   padding-top: 3%;
-  padding-bottom: 3%;
-  height: 660px;
+  padding-bottom: 10%;
   border-bottom: 40px solid white;
 }
 
 .portfolio-container .row {
   display: flex;
   justify-content: space-around;
+  padding-top: 40px;
 }
 
 #portfolio{
@@ -53,7 +53,7 @@
 
 span.jsDescription {
   position: absolute;
-  top: 105px;
+  top: 150px;
   color: white;
   font-size: large;
 }

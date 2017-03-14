@@ -231,7 +231,7 @@
 <div data-ng-controller="homeCtrl">
 <div class="portfolio-container">
   <div id="portfolio"><h1>Portfolio</h1></div><br/>
-  <slide-Dir games="games" style="display: flex; justify-content: space-around; width: 50%; margin: 0 auto">
+  <slide-Dir games="games" style="display: flex; justify-content: space-around; width: 80%; margin: 0 auto">
     <button class="slide-in-btn animated rubberBand" id="games-btn" type="button" value="Toggle First = {{box1}}" ng-click="box1=!box1" style="border: 1px solid black; outline-style: double; outline-color: white">Games</button>
     <button class="slide-in-btn animated rubberBand" id="jsProjects-btn" type="button" value="Toggle third = {{box3}}" ng-click="box3=!box3" style="border: 1px solid black; outline-style: double; outline-color: white">JS Projects</button>
     <button class="slide-in-btn animated rubberBand" id="web-btn" type="button" value="Toggle Second = {{box2}}" ng-click="box2=!box2" style="border: 1px solid black; outline-style: double; outline-color: white">Web</button>
@@ -290,12 +290,12 @@
               <img ui-sref="htmlCanvas" class="img-responsive" id="img3" src="./img/drawing.gif" alt="Mortal Kombat logo">
               <span class="jsDescription">Drawing</span>
           </div>
-          </div>
-          <div class="element">
           <div class="row animated slideInRight">
               <img ui-sref="photogallery" class="img-responsive" id="img3" src="./img/PhotoGallery.gif" alt="Mortal Kombat logo">
               <span class="jsDescription">PhotoGallery</span>
           </div>
+          </div>
+          <div class="element">
           <div class="row animated slideInLeft">
               <img ui-sref="typeAhead" class="img-responsive" id="img3" src="./img/searchlist.png" alt="Mortal Kombat logo">
               <span class="jsDescription">searchlist</span>
